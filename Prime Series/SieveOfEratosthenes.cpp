@@ -4,7 +4,7 @@ using namespace std;
 bool sieve[1000005];
 int N=1000000;
 void buildSieve(){
-    memset(sieve,true,sizeof(sieve));
+    memset(sieve,true,sizeof(sieve)); // initialize everything with 1
     sieve[0]=false;
     sieve[1]=false;
     for(int i=2;i*i<=N;i++){
