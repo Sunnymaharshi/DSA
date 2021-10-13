@@ -1,8 +1,8 @@
 //1. hashing-storing frequency of every no -->TC-O(n) SC-O(n)
 /*
 2.
-sum of 1-n - sum of array elements gives mis-rep
-sum of squares of 1-n - sum of squares of array elements gives mis^2-rep^2
+sum of 1 to n - sum of array elements gives mis-rep
+sum of squares of 1 to n - sum of squares of array elements gives mis^2-rep^2
 find mis,rep from 2 eqs 
 x-y=a
 x^2-y^2=b

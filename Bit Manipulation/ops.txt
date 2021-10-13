@@ -1,0 +1,38 @@
+n>>x --> n= n/(2^x) i.e.  4>>1 = 2
+n<<x --> n= n*(2^x) i.e.  2<<1 = 4
+
+swap two numbers
+a=a^b
+b=a^b
+a=a^b
+
+even or odd
+if(n&1==0) even
+else odd
+
+ith bit is set i.e. 1 or not
+if((n & 1<<i)==1) set
+else not set
+
+set ith bit
+n = n|(1<<i)
+
+clear ith bit
+n = n & ~(1<<i)
+
+clear last set bit
+n = n & (n-1)
+
+check if number is power of 2 
+if(n&(n-1)==0) yes
+else no
+
+count set bits. Time Complexity-O(set bits)
+cnt=0
+while(n!=0)
+    cnt++
+    n=n&(n-1)
+
+
+
+
