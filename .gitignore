@@ -1,1 +1,4 @@
 *.exe
+.vscode/
+.cph/
+CR Sheet/
