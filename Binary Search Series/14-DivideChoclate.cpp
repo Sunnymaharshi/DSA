@@ -23,6 +23,7 @@ bool SubArraysWithAtleast(int arr[], int n, int sweet, int chunks){
 }
 int findMaxMinimumSweet(int arr[], int n, int m){
     int low = *min_element(arr,arr+n), high =0,ans;
+    m=m+1;              // include himself
     for(int i=0;i<n;i++)
         high += arr[i];
     ans=low;
@@ -47,7 +48,7 @@ int main() {
         cin>>arr[i];
     }
     cin>>m;
-    cout<<"maximum min sweet:"<<findMaxMinimumSweet(arr,n,m+1);
+    cout<<"maximum min sweet:"<<findMaxMinimumSweet(arr,n,m);
 
 
     return 0;
