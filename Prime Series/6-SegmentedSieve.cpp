@@ -9,7 +9,7 @@ T(test cases)<=10
 R-L<=10^6
 we can not create array of size 10^12, so we can't use sieve method.
 Segmented Sieve:
-all primes under maxrange(10^9) are <= sqrt(maxrange) i.e 10^6.
+All primes under maxrange(10^9) are <= sqrt(maxrange) i.e 10^6.
 considering worst case, we build sieve array of size 10^6 to find primes.
 we find all primes less than r and remove those multiples in given range.
 */
