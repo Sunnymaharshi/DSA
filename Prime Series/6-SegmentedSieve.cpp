@@ -7,6 +7,11 @@ using namespace std;
 T(test cases)<=10
 (L,R)<=10^12 
 R-L<=10^6
+we can not create array of size 10^12, so we can't use sieve method.
+Segmented Sieve:
+all primes under maxrange(10^9) are <= sqrt(maxrange) i.e 10^6.
+considering worst case, we build sieve array of size 10^6 to find primes.
+we find all primes less than r and remove those multiples in given range.
 */
 bool sieve[1000005];
 int N=1000000;
@@ -40,7 +45,8 @@ int main() {
     while(T--){
         int l,r;
         cin>>l>>r;
-        // generate all primes till sqrt(r)
+        // we only need primes upto sqrt of r.
+        // since in sieve, a prime p starts marking from p*p
         // O(10^6)
         vector<int> primes=generatePrimes(sqrt(r));
 
@@ -55,6 +61,12 @@ int main() {
 
             int firstMultiple = (l/p) * p;
             if(firstMultiple<l) firstMultiple+=p;
+            /* if l=32, p=3 
+            firstMultiple = (32/3) * 3
+            firstMultiple = 10*3 = 30
+            30 not in range hence add 3
+            firstMultiple = 33
+            */
 
             for(int j=max(firstMultiple,p*p); j<=r;j+=p){
                 // since some numbers are already marked by previous primes 
