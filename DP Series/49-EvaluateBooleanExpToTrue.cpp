@@ -101,4 +101,6 @@ int main() {
 
 /*
 Output:
+T^T^F
+0
 */
